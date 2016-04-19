@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="ISO-8859-1">
+  <link data-require="bootstrap-css@*" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="angular.js@*" data-semver="1.3.5" src="https://code.angularjs.org/1.3.5/angular.js"></script>
+  <script data-require="angular.js@*" data-semver="1.3.5" src="https://code.angularjs.org/1.3.5/angular-resource.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="tempCntrl">
+<div class = "panel panel-info">
+
+
+  <div class = "panel-heading">
+      <p class = "panel-title"><h1>Temperature Monitor</h1>
+   </div>
+
+
+  <div class = "panel-body">
+      
+   
+
+  <form name="my_form">
+    <label for="temperture">Add Temperture:</label>
+    <input type="text" name="temperture" id="temperture" ng-model="newtempeature" ng-pattern="/^(\d)+$/" required>
+    <button ng-click="recordTemperature()" class = "btn btn-primary">Add</button>
+    <span ng-show="my_form.temperture.$error.pattern">Enter Numeric digits only!!!</span>
+  </form>
+
+  <hr />
+
+
+  <section>
+    <button ng-click="getCurrentMedian()" class = "btn btn-default">Get Media Temperture</button>
+    Current Median:<b>{{CurrentMedian}}</b>
+  </section>
+
+
+  <hr>
+
+  <p>developer name: --ROHIT KHAPEKAR--</p>
+
+  <hr>
+  <a href="jasmine-test-runner.html">Run Unit Tests</a>
+  
+  </div>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+   
+   
+   
